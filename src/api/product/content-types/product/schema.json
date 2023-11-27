@@ -37,8 +37,10 @@
         "videos"
       ]
     },
-    "IsPublished": {
-      "type": "boolean"
+    "IsPublishedToMarketplace": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     },
     "category": {
       "type": "relation",

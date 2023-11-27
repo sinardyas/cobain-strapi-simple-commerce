@@ -760,7 +760,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     Description: Attribute.RichText;
     Price: Attribute.Decimal & Attribute.Required;
     Image: Attribute.Media;
-    IsPublished: Attribute.Boolean;
+    IsPublishedToMarketplace: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     category: Attribute.Relation<
       'api::product.product',
       'manyToOne',
